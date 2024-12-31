@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:stock_managament_admin/constants/customWidget/constants.dart';
+import 'package:transport_website/constants/customWidget/constants.dart';
 
 class PhoneNumber extends StatelessWidget {
   final TextEditingController controller;

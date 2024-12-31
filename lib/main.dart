@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:stock_managament_admin/app/modules/login/views/login_view.dart';
-import 'package:stock_managament_admin/constants/utils.dart';
-import 'package:stock_managament_admin/firebase_options.dart';
+import 'package:transport_website/app/modules/home/views/home_view.dart';
+import 'package:transport_website/constants/utils.dart';
+import 'package:transport_website/firebase_options.dart';
 
 import 'constants/customWidget/constants.dart';
 
@@ -31,14 +31,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Stock Management Admin',
+      title: 'Transfy',
       theme: AppThemes.darkTheme,
       fallbackLocale: const Locale('eng'),
       locale: _getLocale(),
       translations: MyTranslations(),
       defaultTransition: Transition.fade,
-      // home: const NavBarPageView(),
-      home: LoginView(),
+      home: HomeView(),
     );
   }
 

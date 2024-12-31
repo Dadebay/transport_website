@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class Assets {
   static const String loadingLottie = 'assets/lottie/loading.json';
   static const String noDataLottie = 'assets/lottie/noData.json';
-  static const String stockManagament = 'assets/image/stock_managament.png';
+  static const String logo = 'assets/icons/logo-2.svg';
 }
 
 class Fonts {
@@ -20,21 +20,25 @@ class AppFontSizes {
   static double get screenWidth => Get.width;
   static double get screenHeight => Get.height;
 
-  // 4, 6, 8 ve 10 arasındaki küçük font boyutları
-  static double get fontSize4 => screenWidth * 0.0104; // 4pt
-  static double get fontSize6 => screenWidth * 0.0156; // 6pt
-  static double get fontSize8 => screenWidth * 0.021; // 8pt
-  static double get fontSize10 => screenWidth * 0.026; // 10pt
+  static double getFontSize(double baseSize) {
+    return screenWidth * baseSize / 100;
+  }
 
-  // 12 ve üstü font boyutları
-  static double get fontSize12 => screenWidth * 0.031; // 12pt
-  static double get fontSize14 => screenWidth * 0.036; // 14pt
-  static double get fontSize16 => screenWidth * 0.041; // 16pt
-  static double get fontSize18 => screenWidth * 0.046; // 18pt
-  static double get fontSize24 => screenWidth * 0.0625; // 24pt
-  static double get fontSize32 => screenWidth * 0.083; // 32pt
-  static double get fontSize44 => screenWidth * 0.11; // 44pt
-  static double get fontSize52 => screenWidth * 0.1354; // 52pt
+  static double get fontSize1 => getFontSize(0.26); // 1pt
+  static double get fontSize2 => getFontSize(0.52); // 2pt
+  static double get fontSize3 => getFontSize(0.78); // 3pt
+  static double get fontSize4 => getFontSize(1.04); // 4pt
+  static double get fontSize6 => getFontSize(1.56); // 6pt
+  static double get fontSize8 => getFontSize(2.1); // 8pt
+  static double get fontSize10 => getFontSize(2.6); // 10pt
+  static double get fontSize12 => getFontSize(3.1); // 12pt
+  static double get fontSize14 => getFontSize(3.6); // 14pt
+  static double get fontSize16 => getFontSize(4.1); // 16pt
+  static double get fontSize18 => getFontSize(4.6); // 18pt
+  static double get fontSize24 => getFontSize(6.25); // 24pt
+  static double get fontSize32 => getFontSize(8.3); // 32pt
+  static double get fontSize44 => getFontSize(11); // 44pt
+  static double get fontSize52 => getFontSize(13.54); // 52pt
 }
 
 class BorderRadii {
@@ -80,30 +84,12 @@ class AppThemes {
           statusBarBrightness: Brightness.light,
         ),
         titleTextStyle: TextStyle(
-          color: Colors.white, // Tüm metin renklerini beyaz yap
+          color: AppColors.whiteMainColor, // Tüm metin renklerini beyaz yap
           fontFamily: Fonts.plusJakartaSansBold,
           fontSize: 20,
         ),
         elevation: 0,
       ),
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(color: Colors.white),
-        displayMedium: TextStyle(color: Colors.white),
-        displaySmall: TextStyle(color: Colors.white),
-        headlineLarge: TextStyle(color: Colors.white),
-        headlineMedium: TextStyle(color: Colors.white),
-        headlineSmall: TextStyle(color: Colors.white),
-        titleLarge: TextStyle(color: Colors.white),
-        titleMedium: TextStyle(color: Colors.white),
-        titleSmall: TextStyle(color: Colors.white),
-        bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(color: Colors.white),
-        bodySmall: TextStyle(color: Colors.white),
-        labelLarge: TextStyle(color: Colors.white),
-        labelMedium: TextStyle(color: Colors.white),
-        labelSmall: TextStyle(color: Colors.white),
-      ),
-
       visualDensity: VisualDensity.adaptivePlatformDensity,
     );
   }

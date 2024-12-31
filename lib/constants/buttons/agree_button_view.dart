@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stock_managament_admin/app/modules/home/controllers/home_controller.dart';
-import 'package:stock_managament_admin/constants/customWidget/constants.dart';
+import 'package:transport_website/app/modules/home/controllers/home_controller.dart';
+import 'package:transport_website/constants/customWidget/constants.dart';
 
 class AgreeButton extends StatelessWidget {
   final Function() onTap;

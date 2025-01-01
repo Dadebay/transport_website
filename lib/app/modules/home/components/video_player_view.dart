@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:transport_website/app/modules/home/components/custom_nav_bar.dart';
 import 'package:transport_website/constants/customWidget/constants.dart';
+import 'package:transport_website/constants/customWidget/custom_button.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerView extends StatefulWidget {
@@ -170,35 +170,15 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _button(color: AppColors.darkMainColor, text: 'Track Order'),
+                CustomButton(color: AppColors.darkMainColor, text: 'Track Order'),
                 const SizedBox(width: 50),
-                _button(color: AppColors.brandYellow, text: 'Our Service'),
+                CustomButton(color: AppColors.brandYellow, text: 'Our Service'),
               ],
             ),
           ),
         ],
       ),
     );
-  }
-
-  ElevatedButton _button({required String text, required Color color}) {
-    return ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30), backgroundColor: color),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(right: AppFontSizes.getFontSize(1)),
-              child: Text(
-                text,
-                style: TextStyle(color: AppColors.whiteMainColor, fontSize: 18, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Icon(IconlyLight.arrowRightCircle, size: AppFontSizes.getFontSize(1.2), color: AppColors.whiteMainColor),
-          ],
-        ));
   }
 
   Positioned dots(double screenWidth) {

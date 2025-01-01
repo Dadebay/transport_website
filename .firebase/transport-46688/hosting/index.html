@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Transfy">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <title>Transfy</title>
+    <link rel="manifest" href="manifest.json">
+    <script type="text/javascript"> window.flutterWebRenderer = "html"; </script>
+    <script>
+      window.addEventListener('load', function(ev) {
+        Flutter.runApp(MyApp());
+      });
+    </script>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js';
+      import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
+      import { getStorage } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js';
+      const firebaseConfig = {
+        apiKey: "AIzaSyD1jGZqkP6OQWKpQlsM4XQRRgh4BJ1jF24",
+    authDomain: "transport-46688.firebaseapp.com",
+    projectId: "transport-46688",
+    storageBucket: "transport-46688.firebasestorage.app",
+    messagingSenderId: "916079167148",
+    appId: "1:916079167148:web:bfaddb857833e09f088109",
+    measurementId: "G-8PPFPTKZT0"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
+    </script>
+    <script>
+      const serviceWorkerVersion = '"73253425"';
+    </script>
+    <script src="flutter.js" defer></script>
+  </head>
+  <body>
+    <script>
+      window.addEventListener('load', function(ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function(engineInitializer) {
+            engineInitializer.initializeEngine().then(function(appRunner) {
+              appRunner.runApp();
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+  </html>

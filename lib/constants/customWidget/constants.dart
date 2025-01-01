@@ -69,6 +69,10 @@ class AppColors {
   static const Color systemRedGraph = Color(0xFFD21B1E);
   static const Color errorRed = Color(0xFF7A0007);
   static const Color green = Color(0xFF05B124);
+  static const Color blue = Color(0xff1A237E);
+  static const Color darkBlue = Color.fromARGB(255, 14, 23, 127);
+  static const Color whiteBlue = Color(0xff3038ae);
+  static final Color defaultCardColor = const Color(0xff1A239E);
 }
 
 class AppThemes {
